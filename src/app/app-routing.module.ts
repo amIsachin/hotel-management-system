@@ -1,14 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AllUsersComponent } from './user/components/all-users/all-users.component';
-import { UserComponent } from './user/user.component';
+import { HotelComponent } from './hotel/hotel.component';
 
 const routes: Routes = [
-  {
-    path: 'user', component:UserComponent,children:[
-    {path: 'all-users', component: AllUsersComponent}
-  ]}
-];
+  { path: 'hotel', component: HotelComponent }
+]
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

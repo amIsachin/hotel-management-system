@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { UserRoutingModule } from './user-routing.module';
 import { UserComponent } from './user.component';
 import { AllUserComponent } from './components/all-user/all-user.component';
-
+import { MatTableModule } from '@angular/material/table';
 
 
 @NgModule({
@@ -13,7 +13,8 @@ import { AllUserComponent } from './components/all-user/all-user.component';
   ],
   imports: [
     CommonModule,
-    UserRoutingModule
+    UserRoutingModule,
+    MatTableModule
   ]
 })
 export class UserModule { }

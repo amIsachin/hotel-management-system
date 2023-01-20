@@ -10,7 +10,7 @@ import { UserService } from 'src/app/service/user.service';
 })
 export class AllUserComponent implements OnInit {
   public userEntity:UserEntity[] = [];
-  public displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
+  public displayedColumns: string[] = ['Name', 'Gender', 'Age', 'City', 'FromDate'];
   public dataSource:MatTableDataSource<UserEntity> = new MatTableDataSource<UserEntity>();
   constructor(private _userService: UserService) { }
 
@@ -20,7 +20,8 @@ export class AllUserComponent implements OnInit {
 
   private getAllUsers() {
     this._userService.getAllUsers().subscribe(response=>{
-      console.log(response);
+      this.userEntity = response;
+      this.dataSource = new MatTableDataSource<UserEntity>(this.userEntity);
     });
   }
 

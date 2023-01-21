@@ -4,6 +4,7 @@ import { HotelComponent } from './hotel.component';
 import { AllHotelsComponent } from './components/all-hotels/all-hotels.component';
 import { HotelRoutingModule } from './hotel-routing.module';
 import { RouterModule } from '@angular/router';
+import { MatTableModule } from '@angular/material/table';
 
 
 
@@ -15,7 +16,8 @@ import { RouterModule } from '@angular/router';
   imports: [
     CommonModule,
     HotelRoutingModule,
-    RouterModule
+    RouterModule,
+    MatTableModule
   ]
 })
 export class HotelModule { }
